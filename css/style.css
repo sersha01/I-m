@@ -1089,7 +1089,14 @@ body.light hr.separator {
   border-radius: 50%;
 }
 /* Form */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .contact .contactform input[type=text],
+.contact .contactform input[type=number],
 .contact .contactform input[type=email] {
   border: 1px solid #111;
   width: 100%;
