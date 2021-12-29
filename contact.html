@@ -123,16 +123,16 @@
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <input type="text" name="name" placeholder="YOUR NAME">
+                                <input class="name" type="text" name="name" placeholder="YOUR NAME" required>
                             </div>
                             <div class="col-12 col-md-4">
-                                <input type="email" name="email" placeholder="YOUR EMAIL">
+                                <input type="email" name="email" placeholder="YOUR EMAIL" required>
                             </div>
                             <div class="col-12 col-md-4">
-                                <input class="check" type="number" name="subject" placeholder="YOUR NUMBER">
+                                <input id="number" class="number" type="number" name="subject" placeholder="YOUR NUMBER" required>
                             </div>
                             <div class="col-12">
-                                <textarea name="message" placeholder="YOUR MESSAGE"></textarea>
+                                <textarea id="message" class="message" name="message" placeholder="YOUR MESSAGE" required></textarea>
                                 <button type="submit" class="button">
                                     <span class="button-text">Send Message</span>
                                     <span class="button-icon fa fa-send"></span>

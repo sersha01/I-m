@@ -181,6 +181,7 @@ body.light.portfolio .slideshow {
 
 body.light.contact .contactform input[type=text],
 body.light.contact .contactform input[type=email],
+body.light.contact .contactform input[type=number],
 body.light.contact .contactform textarea {
   background-color: #fff;
   border: 1px solid #ddd;
