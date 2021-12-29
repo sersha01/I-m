@@ -23,4 +23,3 @@ document.querySelector(".message").addEventListener("keypress", function (evt) {
     }
 });
 
-

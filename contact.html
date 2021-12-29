@@ -119,17 +119,17 @@
             <!-- Left Side Ends -->
             <!-- Contact Form Starts -->
             <div class="col-12 col-lg-8">
-                <form class="contactform" method="post" action="http://slimhamdi.net/tunis/dark/php/process-form.php">
+                <form id="submit-form" class="contactform" action="">
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-4">
                                 <input class="name" type="text" name="name" placeholder="YOUR NAME" required>
                             </div>
                             <div class="col-12 col-md-4">
-                                <input type="email" name="email" placeholder="YOUR EMAIL" required>
+                                <input id="email" type="email" name="email" placeholder="YOUR EMAIL" required>
                             </div>
                             <div class="col-12 col-md-4">
-                                <input id="number" class="number" type="number" name="subject" placeholder="YOUR NUMBER" required>
+                                <input id="number" class="number" type="number" name="number" placeholder="YOUR NUMBER" required>
                             </div>
                             <div class="col-12">
                                 <textarea id="message" class="message" name="message" placeholder="YOUR MESSAGE" required></textarea>
@@ -164,6 +164,28 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/custom.js"></script>
 <script src="js/script.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbx-S7dBP9B2t_4p8yiB10rsPfskw2vcWLHTowrB4ZC-pC8BOo7LNLpm87VlpuxqCgs/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                alert("Form submitted successfully")
+                window.location.reload()
+                //window.location.href="https://google.com"
+            },
+            error:function (err){
+                alert("Something Error")
+
+            }
+        })
+    })
+</script>
 
 </body>
 
