@@ -7,9 +7,14 @@ document.querySelector(".number").addEventListener("keypress", function (evt) {
     }
 });
 document.querySelector(".name").addEventListener("keypress", function (evt) {
-    if ( evt.which < 65 || evt.which > 90 && evt.which <97 || evt.which > 122)
+    if (evt.which != 32 && evt.which < 65 || evt.which > 90 && evt.which <97 || evt.which > 122)
     {
         evt.preventDefault();
+    }else if ( evt.which == 32)
+    {
+        if (document.getElementById("name").value == '') {
+            evt.preventDefault();
+        }
     }
 });
 
